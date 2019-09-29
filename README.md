@@ -16,10 +16,10 @@ __*Query string parameters:*__
 
 Parameter | Required/Optional | Description 
 --------- | ----------------- | -----------
-Bus | Required | Bus service number.
-Dir | Required | Direction in which bus is travelling; can be 1 or 2.
-Start | Required | Starting bus stop code.
-End | Required | Ending bus stop code. 
+bus | Required | Bus service number.
+dir | Required | Direction in which bus is travelling; can be 1 or 2.
+start | Required | Starting bus stop code.
+end | Required | Ending bus stop code. 
 
 __*Header parameters:*__
 
@@ -53,11 +53,11 @@ Returns JSON data containing the authentication token.
 
 __*Body parameters:*__
 
-Parameter | Required/Optional | Description
---------- | ----------------- | ----------
-Name | Required | Name of user.
-Email | Required | User email.
-Password | Required | User password.
+Parameter | Type | Required/Optional | Description
+--------- | ---- | ----------------- | ----------
+Name | String | Required | Name of user.
+Email | String | Required | User email.
+Password | String | Required | User password.
 
 __*Example of response body:*__
 ```
@@ -83,10 +83,10 @@ Returns JSON data containing the authentication token.
 
 __*Body parameters:*__
 
-Parameter | Required/Optional | Description
---------- | ----------------- | ----------
-Email | Required | User email.
-Password | Required | User password.
+Parameter | Type | Required/Optional | Description
+--------- | ---- |------------------ | ----------
+Email | String | Required | User email.
+Password | String | Required | User password.
 
 __*Example of response body:*__
 ```
