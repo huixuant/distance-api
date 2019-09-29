@@ -54,6 +54,9 @@ router.post("/login", (req, res) => {
     if (!user) {
       return res.status(404).send("No user found.");
     }
+    if (!req.body.password) {
+      return res.status(404).send("Please provide password.");
+    }
     //verifies password
     let passwordIsValid = bcrypt.compareSync(req.body.password, user.password);
     if (!passwordIsValid) {
@@ -66,10 +69,6 @@ router.post("/login", (req, res) => {
 
     res.status(200).send({ auth: true, token: token });
   });
-});
-
-router.get("/logout", (req, res) => {
-  res.status(200).send({ auth: false, token: null });
 });
 
 module.exports = router;
